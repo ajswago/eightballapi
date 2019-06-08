@@ -1,6 +1,8 @@
 # eightballapi
 This project was created to test hosting an API from a [Raspberry Pi](https://www.raspberrypi.org/). The Raspberry Pi runs Raspbian Stretch Lite. The project was created using Spring Boot initializr. It requires a Postgres DB. The API has been Dockerized and was run on the Raspberry Pi in the same custom bridge network as the database container.
 ## Dependencies
+* Java
+* Maven
 * Postgres
 * Docker
 ## Docker Installation on Raspberry Pi
