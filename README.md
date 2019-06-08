@@ -47,6 +47,7 @@ $ docker save -o eightballapi_0.0.1.tar eightballapi:0.0.1
 2. Import the image from the tar file
 3. Run a container from the image
 ```
+$ scp eightballapi_0.0.1.tar <RemoteUser>@<RemoteAddress>:~/
 $ docker load -i ~/eightballapi_0.0.1.tar
 $ docker run --name eightballdb -d -p 5432:5432 \
 $            -v ~/docker/volumes/postgres:/var/lib/postgresql/data \
