@@ -49,10 +49,5 @@ $ docker save -o eightballapi_0.0.1.tar eightballapi:0.0.1
 ```
 $ scp eightballapi_0.0.1.tar <RemoteUser>@<RemoteAddress>:~/
 $ docker load -i ~/eightballapi_0.0.1.tar
-$ docker run --name eightballdb -d -p 5432:5432 \
-$            -v ~/docker/volumes/postgres:/var/lib/postgresql/data \
-$            -e POSTGRES_DB=eightballdb \
-$            -e POSTGRES_USER=eightballadmin \
-$            -e POSTGRES_PASSWORD=chimis666 \
-$            -network eightballnetwork tobi312/rpi-postgresql:9.6
+$ docker run -it -p 7000:7000 --network eightballnetwork eightballapi:0.0.1
 ```
