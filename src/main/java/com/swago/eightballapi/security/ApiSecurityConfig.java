@@ -30,10 +30,7 @@ public class ApiSecurityConfig extends WebSecurityConfigurerAdapter {
 
             @Override
             public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-                System.out.println("Authenticating for request");
                 String principal = (String) authentication.getPrincipal();
-                System.out.println("Principal for authentication: " + principal);
-                System.out.println("Principal request value: " + principalRequestValue);
                 if (!principalRequestValue.equals(principal))
                 {
                     throw new BadCredentialsException("The API key was not found or not the expected value.");
